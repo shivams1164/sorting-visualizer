@@ -1,9 +1,6 @@
 package com.fatin.sortSpectra;
 
-/**
- *
- * @author MOHAMMAD FATIN NUR
- */
+
 public class InsertionSort implements Runnable{
 
     public Integer[] arr;

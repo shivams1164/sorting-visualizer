@@ -1,7 +1,23 @@
 package com.fatin.sortSpectra;
 
-import java.awt.*;
-import javax.swing.*;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.GridLayout;
+import java.awt.Insets;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JDialog;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JSlider;
+import javax.swing.SwingConstants;
 
 public class Frame extends JFrame {
 
@@ -35,15 +51,13 @@ public class Frame extends JFrame {
         add(graphPanel, BorderLayout.CENTER);
         graphPanel.setBackground(new Color(0x070F2B));
 
-        // Display the welcome popup
         showWelcomePopup();
         setVisible(true);
     }
 
-    // Setup the sidebar with sliders, dropdown, and buttons
     private void setupSidebar() {
         startButton.addActionListener(e -> Sort_Spectra.startSort((String) sortDropdown.getSelectedItem()));
-        cancelButton.addActionListener(e -> Sort_Spectra.stopSort());  // Stop sorting when cancel button is clicked
+        cancelButton.addActionListener(e -> Sort_Spectra.stopSort()); 
 
         sidebar.setBackground(PRIMARY_COLOR);
         sidebar.add(speedSlider);
@@ -53,7 +67,6 @@ public class Frame extends JFrame {
         sidebar.add(cancelButton);  // Add cancel button to the sidebar
     }
 
-    // Create a slider with given parameters and a label showing its value
     private JSlider createSlider(int min, int max, int value, String prefix, String suffix) {
         JLabel label = new JLabel(prefix + value + suffix, SwingConstants.CENTER);
         label.setForeground(SECONDARY_COLOR);

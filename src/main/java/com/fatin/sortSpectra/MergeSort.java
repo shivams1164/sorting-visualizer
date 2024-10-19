@@ -1,8 +1,6 @@
 package com.fatin.sortSpectra;
 
-/**
- * Implements Merge Sort algorithm with visual feedback using a frame.
- */
+
 public class MergeSort implements Runnable {
 
     private final Integer[] arr;  // Array to be sorted

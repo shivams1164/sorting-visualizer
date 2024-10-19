@@ -1,8 +1,6 @@
 package com.fatin.sortSpectra;
 
-/**
- * Implements Heap Sort algorithm with visual feedback using a frame.
- */
+
 public class HeapSort implements Runnable {
 
     private final Integer[] arr;  // Array to be sorted

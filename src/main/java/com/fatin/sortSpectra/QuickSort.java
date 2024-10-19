@@ -1,8 +1,6 @@
 package com.fatin.sortSpectra;
 
-/**
- * Implements Quick Sort algorithm with visual feedback using a frame.
- */
+
 public class QuickSort implements Runnable {
 
     private final Integer[] arr;  // Array to be sorted
